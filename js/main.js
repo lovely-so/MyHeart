@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let clickCount = 0;
 
     const messages = [
-        "🎉 كل سنة وإنتى طيب 🎉",
+        "🎉 كل سنة وإنتى طيبه 🎉",
         "🎂 يوم ميلاد سعيد 🎂",
         "🎁 جهزى نفسك للمفاجأه 🎁",
         "🌟 لنبدأ الاحتفال 🌟"
