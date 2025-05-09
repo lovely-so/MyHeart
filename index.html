@@ -1,43 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>Enhanced Image Gallery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="gallery-container">
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-message container w-50 m-auto fs-4 mt-3 mb-5  " id="loadingMessage">🎉 كل سنه وانتي طيبه ♥🥳 ومعايا كل سنه وانتي بنتي وحبيبتي واختي والشخص اللي بلجأله ع طول ♥ ربنا يسعدنا ويجمعنا ببعض يارب
+        انتي بنسباله حاجة كبيره عندي ومفيش كلام هيتقال هيوصف غلوتك عندي ولا هيوفي انتي أي بنسبالي انتي مش مجرد شخص عابر انتي شخص
+        عبر ف حياتي وقرر انوا يفضل فيها ويكمل فيها نورتيلي حياتي ودنيتي ♥♥ رغم اننا ساعات بنختلف بس دايما بنلف ونلف ونرجع لبعض
+        ربنا يسعدنا ويفضل مجمعنا مع بعض ومنتفرقش ابداً من 2021 واحنا مع بعض لازقه فيا 🌚😂😂 بس لزقه حلوة الصراحه 🌚♥ خمس سنين
+        مع بعض جروا بسرعة جدا جدا رغم ان الهانم فرهدتني فيهم بس دول احسن فتره ف حياتي علشان فيه اخيارات كتير اخترتها بنفسي واهم
+        اختيار فيهم هو انتي♥♥ ربنا يسعدنا ويفرحنا ويجمعنا مع بعض بأذن الله فى اقرب وقت ♥♥</div>
+        <div class="loading-instruction">اضغط في أي مكان لبدء الاحتفال! 🎈</div>
+    </div>
+    <div class="gallery-container" id="galleryContainer">
         <div class="main-image-container">
-            <img src="images/5.jpg" id="mainImage" alt="Main Image">
+            <button class="nav-btn prev-btn" aria-label="Previous Image">❮</button>
+            <img src="images/5.jpg" id="mainImage" alt="Main Image" loading="lazy">
+            <button class="nav-btn next-btn" aria-label="Next Image">❯</button>
             <p id="mainCaption" class="main-caption pt-3">My Queen</p>
         </div>
-        <div class="thumbnail-container">
-            <div class="thumbnail-wrapper">
-                <img src="images/1.jpg" class="thumbnail" alt="Thumbnail 1" data-caption="better strong person">
-                <p class="thumbnail-caption  pt-2">better strong person</p>
+        <div class="thumbnail-container py-4 ">
+            <div class="thumbnail-wrapper py-3">
+                <img src="images/1.jpg" class="thumbnail" alt="Thumbnail 1" data-caption="Better strong person"
+                    loading="lazy">
+                <p class="thumbnail-caption pt-2">Better strong person</p>
             </div>
-            <div class="thumbnail-wrapper">
-                <img src="images/2.jpg" class="thumbnail" alt="Thumbnail 2" data-caption="sweet heart">
-                <p class="thumbnail-caption pt-2">sweet heart</p>
+            <div class="thumbnail-wrapper py-3">
+                <img src="images/2.jpg" class="thumbnail" alt="Thumbnail 2" data-caption="Sweet heart" loading="lazy">
+                <p class="thumbnail-caption pt-2">Sweet heart</p>
             </div>
-            <div class="thumbnail-wrapper">
-                <img src="images/3.jpg" class="thumbnail" alt="Thumbnail 3" data-caption="Vibrant Flowers">
+            <div class="thumbnail-wrapper py-3">
+                <img src="images/3.jpg" class="thumbnail" alt="Thumbnail 3" data-caption="Vibrant Flowers"
+                    loading="lazy">
                 <p class="thumbnail-caption pt-2">Vibrant Flowers</p>
             </div>
-            <div class="thumbnail-wrapper">
-                <img src="images/4.jpg" class="thumbnail" alt="Thumbnail 4" data-caption="Source of happiness">
+            <div class="thumbnail-wrapper py-3">
+                <img src="images/4.jpg" class="thumbnail" alt="Thumbnail 4" data-caption="Source of happiness"
+                    loading="lazy">
                 <p class="thumbnail-caption pt-2">Source of happiness</p>
             </div>
-            <div class="thumbnail-wrapper">
-                <img src="images/5.jpg" class="thumbnail active" alt="Thumbnail 5" data-caption="My strawberry">
-                <p class="thumbnail-caption pt-2">My strawberry</p>
+            <div class="thumbnail-wrapper py-3">
+                <img src="images/5.jpg" class="thumbnail active" alt="Thumbnail 5" data-caption="My Queen"
+                    loading="lazy">
+                <p class="thumbnail-caption pt-2">My Queen</p>
+            </div>
+            <div class="thumbnail-wrapper py-3">
+                <img src="images/6.jpg" class="thumbnail" alt="Thumbnail 6" data-caption="My daughter" loading="lazy">
+                <p class="thumbnail-caption pt-2">My daughter</p>
+            </div>
+            <div class="thumbnail-wrapper py-3">
+                <img src="images/7.jpg" class="thumbnail" alt="Thumbnail 7" data-caption="My love" loading="lazy">
+                <p class="thumbnail-caption pt-2">My love</p>
+            </div>
+            <div class="thumbnail-wrapper py-3">
+                <img src="images/8.jpg" class="thumbnail" alt="Thumbnail 8" data-caption="My shining star"
+                    loading="lazy">
+                <p class="thumbnail-caption pt-2">My shining star</p>
+            </div>
+            <div class="thumbnail-wrapper py-3">
+                <img src="images/9.jpg" class="thumbnail" alt="Thumbnail 9" data-caption="My eternal joy"
+                    loading="lazy">
+                <p class="thumbnail-caption pt-2">My eternal joy</p>
             </div>
         </div>
     </div>
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" aria-label="Close Lightbox">×</span>
+        <img src="" id="lightboxImage" alt="Lightbox Image">
+        <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+<audio id="celebrationSound" autoplay>
+  <source src="happy-birthday-254480.mp3" type="audio/mpeg">
+  متصفحك لا يدعم عنصر الصوت.
+</audio>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
